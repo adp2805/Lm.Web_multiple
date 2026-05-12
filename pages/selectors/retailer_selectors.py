@@ -1,0 +1,8 @@
+from selenium.webdriver.common.by import By
+RETAILER_BY_ID = (By.CSS_SELECTOR,'input#rbRetailersSearchCriteria[value="2"]')
+INSER_RETAILER_ID = (By.CSS_SELECTOR,'input#tbRetailerId')
+SELECT_RETAILER = (By.XPATH,'//td[@class="name clickable_cell"]')
+MODIFY_RETAILER = (By.XPATH,'//div[@class="content_section section_buttons"]//a[1]')
+MODIFY_NAME = (By.CSS_SELECTOR,'#Contact_Name')
+SAVE_RETAILER = (By.CSS_SELECTOR,'input.submit_positive')
+SEARCH_RETAILER = (By.CSS_SELECTOR,'#btSearch')
