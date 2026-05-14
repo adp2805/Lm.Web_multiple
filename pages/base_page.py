@@ -10,6 +10,8 @@ class Base_page(Browser):
     def insert_input(self,input_value,element):
         self.driverObject.find_element(*element).send_keys(input_value)
 
+    def find_elements(self,element):
+        self.driverObject.find_elements(*element)
 
     def click_button(self,element):
         self.driverObject.find_element(*element).click()
@@ -37,3 +39,11 @@ class Base_page(Browser):
         actual_error_message = self.driverObject.find_element(*element).text
         err = "Wrong username or password"
         assert  err == actual_error_message, f"Expected error message{err} is different from {actual_error_message}"
+
+
+    def verify_value(self,value_regional_center,value_retailer):
+        assert int(value_retailer) <= int(value_regional_center),f"Err: Retailer limit{value_retailer} is higher than\
+        regional center limit {value_regional_center} limit"
+
+
+

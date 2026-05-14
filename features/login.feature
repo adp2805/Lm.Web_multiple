@@ -37,8 +37,7 @@ Feature: This feature will validate the functionality of the login page
     And I click on search button
     And I click on the selected terminal
     And I click on modify terminal button
-    And I click on a specify group
-    And I click on move to allow group
+    And I manage group allocation
     And I click on save terminal
    # And I should not see any err message: {err}
     And I click on home button
