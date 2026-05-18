@@ -25,6 +25,11 @@ def stept_impl(context):
 def step_impl(context):
     context.base_page.click_button(RETAILER)
     sleep(2)
+@when('I click on Agent button')
+def step_impl(context):
+    context.base_page.click_button(AGENT_BUTTON)
+    sleep(2)
+
 @then('I click on Logout button')
 def step_impl(context):
     context.base_page.click_button(LOGOUT_BUTTON)

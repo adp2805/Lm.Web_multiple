@@ -6,4 +6,4 @@ HOMEBUTTON = (By.CSS_SELECTOR, "div.home")
 TERMINALBUTTON = (By.XPATH,'//div[@class="rtc_manager"]//a[@href="/LM/Terminals"]')
 REGIONAL_CENTER = (By.CSS_SELECTOR,"li.regional_centers>a")
 RETAILER = (By.CSS_SELECTOR,'li.retailers>a')
-
+AGENT_BUTTON = (By.CSS_SELECTOR,'li.agents>a')

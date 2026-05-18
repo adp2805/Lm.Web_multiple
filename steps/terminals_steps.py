@@ -14,7 +14,7 @@ def step_impl(context):
     sleep(2)
 
 @when ('I click on search button')
-def step_implu(context):
+def step_impl(context):
     context.base_page.click_button(SEARCHTBUTTON)
     sleep(4)
 
