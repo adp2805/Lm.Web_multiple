@@ -9,7 +9,7 @@ from pages.selectors.login_selectors import *
 # primul lucru in login, importam libraria behave
 
 
-@given("I access the Lm.web homepage") # Ce este intre ghilimele trebuie sa fie identic cu ce avem in login.feature
+@given("I access the Lm.web homepage") # Ce este intre ghilimele trebuie sa fie identic cu ce avem in 01_login.feature
                                         # fara spatiu fara punct, identic!!!!
 def step_impl(context):
     context.login_page.go_to_login_page()

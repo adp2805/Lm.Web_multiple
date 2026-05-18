@@ -6,3 +6,5 @@ MODIFY_RETAILER = (By.XPATH,'//div[@class="content_section section_buttons"]//a[
 MODIFY_NAME = (By.CSS_SELECTOR,'#Contact_Name')
 SAVE_RETAILER = (By.CSS_SELECTOR,'input.submit_positive')
 SEARCH_RETAILER = (By.CSS_SELECTOR,'#btSearch')
+ONLINE_PAYMENT_LIMIT = (By.CSS_SELECTOR,'#Max_pay_online')
+OFFLINE_PAYMENT_LIMIT = (By.CSS_SELECTOR,'#Max_pay_offline')

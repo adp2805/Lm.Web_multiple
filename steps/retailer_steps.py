@@ -38,7 +38,16 @@ def step_impl(context):
     context.base_page.insert_input(ret_name+"1",MODIFY_NAME)
     sleep(2)
 
+@when('I modify the online payment limit with "{payment_limit}"')
+def step_impl(context,payment_limit):
+    context.base_page.insert_input(payment_limit, ONLINE_PAYMENT_LIMIT)
+    sleep(2)
+
 @when('I clic on save retailer')
 def step_impl(context):
     context.base_page.click_button(SAVE_RETAILER)
     sleep(2)
+
+# @when('I should see error message "{expected_err>}')
+# def step_impl(context,expected_err):
+#     context.base_page.verify_err_msg_outline(expected_err,)
