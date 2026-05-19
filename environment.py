@@ -19,5 +19,6 @@ def before_all(context):
     context.base_page = Base_page()
 
 
+
 def after_all(context):
     context.browser.close_browser()

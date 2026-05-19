@@ -4,6 +4,7 @@ from behave import *
 
 
 from pages.selectors.login_selectors import *
+from pages.selectors.homepage_selectors import *
 
 
 # primul lucru in login, importam libraria behave
@@ -43,10 +44,10 @@ def step_impl(context):
 def step_impl(context,expected_err_message):
     context.base_page.verify_err_msg_outline(expected_err_message,WRONG_PASSWORD_MSG)
 
-# @when('I click logout button')
-# def step_impl(context):
-#     context.login_page.click_logout_button()
-#     sleep(5)
+@when('I click logout button')
+def step_impl(context):
+    context.login_page.click_logout_button(LOGOUT_BUTTON)
+    sleep(5)
 # @then('I should be on the loggin page')
 # def step_impl(context):
 

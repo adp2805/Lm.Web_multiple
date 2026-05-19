@@ -19,15 +19,15 @@ Feature: Positive Testing
     And I insert the new name
     And I modify the online payment limit with "<payment_limit>"
     And I clic on save retailer
-#    And I should see error message "<expected_err>"
-    Then I click on Logout button
+    And I should see error message "<expected_err>"
+    And I click on Logout button
 
     @negative_testing
     Examples:
-    |payment_limit||expected_err|
-    |999999999||retailer value higher than regional center|
+      | payment_limit | expected_err                               |
+      | 999999999     | retailer value higher than regional center |
 
     @positive_testing
     Examples:
-    |payment_limit||expected_err|
-    |99999        ||null        |
+      | payment_limit |   expected_err |
+      | 99999         |                |
