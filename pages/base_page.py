@@ -36,8 +36,9 @@ class Base_page(Browser):
 
 
     def verify_err_msg_outline(self,err,element):
-        actual_error_message = self.driverObject.find_element(*element).text
-        assert  err == actual_error_message, f"Expected error message:{err} is different from {actual_error_message}"
+        actual_error_message = self.driverObject.find_element(*element).text.strip()
+        assert err.strip() == actual_error_message, f"Expected error message:{err}\
+        is different from {actual_error_message}"
 
 
     def verify_value(self,value_regional_center,value_retailer):

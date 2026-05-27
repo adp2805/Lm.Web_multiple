@@ -3,10 +3,10 @@ from time import *
 from pages.selectors.login_selectors import *
 from pages.selectors.succursales_selectors import *
 from pages.selectors.homepage_selectors import *
-@when ('I click on home button')
-def step_impl(context):
-    context.base_page.click_button(HOMEBUTTON)
-    sleep(2)
+# @when ('I click on home button')
+# def step_impl(context):
+#     context.base_page.click_button(HOMEBUTTON)
+#     sleep(2)
 
 @when ("I select one succursale from the list")
 def step_impl(context):
