@@ -45,5 +45,17 @@ class Base_page(Browser):
         assert int(value_retailer) <= int(value_regional_center),f"Err: Retailer limit{value_retailer} is higher than\
         regional center limit {value_regional_center} limit"
 
-
+    def select_groups(self,check_element, btn_select, btn_action):
+        is_allocated = self.driverObject.find_elements(*check_element)
+        if is_allocated:
+            """
+            check_element  = selectorul care verifică dacă e deja alocat
+            btn_select     = butonul SELECT_GROUP (comun pentru ambele cazuri)
+            btn_action     = REMOVE_GROUP dacă e alocat, ALLOW_GROUP dacă nu e
+            """
+            self.driverObject.find_element(*btn_select).click()
+            self.driverObject.find_element(*btn_action).click()
+        else:
+            self.driverObject.find_element(*btn_select).click()
+            self.driverObject.find_element(*btn_action).click()
 

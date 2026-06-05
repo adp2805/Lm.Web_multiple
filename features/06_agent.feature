@@ -15,5 +15,6 @@ Feature: Positive Testing
     And i click on agent search button
     And I click on the specify agent
     And I click on modify agent
+#    And I manage group allocation
 
 

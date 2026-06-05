@@ -5,4 +5,6 @@ MODIFYSUC = (By.XPATH,'//a[@href="/LM/Branches/Edit/2"]')
 MODIFY_SUC_NAME = (By.CSS_SELECTOR,"input#Description")
 SAVEBUTTON = (By.XPATH,'//input[@class="submit_positive"]')
 DELETEINPUT = (By.CSS_SELECTOR,"input#Description")
+ONLINE_PAYMENT_LIMIT = (By.CSS_SELECTOR,'#Max_pay_online')
+EXPECTED_ERR = (By.XPATH,'//span[@class="field-validation-error"]')
 

@@ -21,16 +21,29 @@ def step_impl(context):
 def step_impl(context):
     context.base_page.delete_input(DELETEINPUT)
     sleep(2)
-@when ("I modify the name or the limit")
+@when ('I modify the name or the limit with "{succursale_name}"')
+def step_impl(context,succursale_name):
+    context.base_page.insert_input(succursale_name,MODIFY_SUC_NAME)
+    sleep(2)
+
+@when('I delete the current online payment limit')
 def step_impl(context):
-    context.base_page.insert_input("Editec_automatizare_python",MODIFY_SUC_NAME)
+    context.base_page.delete_input(ONLINE_PAYMENT_LIMIT)
+    sleep(2)
+
+@when('I insert the new value "{payment_value}"')
+def step_impl(context,payment_value):
+    context.base_page.insert_input(payment_value,ONLINE_PAYMENT_LIMIT)
     sleep(2)
 
 @when ("I click on save succursale")
 def step_impl(context):
     context.base_page.click_button(SAVEBUTTON)
     sleep(2)
-
+@when('I should see an succursale error message "{expected_err}"')
+def step_impl(context,expected_err):
+    context.base_page.verify_err_msg_outline(expected_err, EXPECTED_ERR)
+    sleep(2)
 @when ('I should get back to the homepage')
 def step_impl(context):
     context.home_page.verify_login_successful()
